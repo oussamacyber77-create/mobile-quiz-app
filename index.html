@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>أكاديمية التعلم</title>
+    <meta name="description" content="تطبيق اختبارات للمواد الدراسية">
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="style.css?v=15">
+    <meta name="theme-color" content="#FF5A3C">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="icon-192.png" type="image/png">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    
+    <nav class="top-nav hidden" id="top-nav">
+        <div class="nav-content">
+            <button id="back-btn" class="icon-btn">
+                <i data-lucide="arrow-right"></i>
+            </button>
+            <h2 id="nav-title">الفصول الدراسية</h2>
+        </div>
+    </nav>
+
+    <!-- واجهة الرئيسية: المواد -->
+    <div id="home-view" class="view-container">
+        <header class="main-header">
+            <div class="header-icon">
+                <i data-lucide="graduation-cap"></i>
+            </div>
+            <h1>اختر المادة</h1>
+            <p>ابدأ رحلة التعلم عبر اختيار إحدى المواد المتاحة</p>
+        </header>
+
+        <div class="grid cards-grid">
+            <div class="card subject-card" data-subject="mobile">
+                <div class="icon-circle primary-light"><i data-lucide="smartphone"></i></div>
+                <h3>Mobile Applications</h3>
+                <i data-lucide="chevron-left" class="arrow"></i>
+            </div>
+            <div class="card subject-card" data-subject="security">
+                <div class="icon-circle primary-light"><i data-lucide="shield-check"></i></div>
+                <h3>Security</h3>
+                <i data-lucide="chevron-left" class="arrow"></i>
+            </div>
+            <div class="card subject-card" data-subject="ai">
+                <div class="icon-circle primary-light"><i data-lucide="brain-circuit"></i></div>
+                <h3>Artificial Intelligence</h3>
+                <i data-lucide="chevron-left" class="arrow"></i>
+            </div>
+            <div class="card subject-card" data-subject="data">
+                <div class="icon-circle primary-light"><i data-lucide="database"></i></div>
+                <h3>Semi Structured Data</h3>
+                <i data-lucide="chevron-left" class="arrow"></i>
+            </div>
+        </div>
+    </div>
+
+    <!-- واجهة الفصول -->
+    <div id="chapters-view" class="view-container hidden">
+        <div class="chapters-header">
+            <div class="icon-circle"><i data-lucide="book-open"></i></div>
+            <h2 id="chapters-subject-title">Mobile Applications</h2>
+            <p>اختر الفصل لبدء الاختبار</p>
+        </div>
+        <div id="mobile-sections">
+        <h3 class="section-title">الكورسات (Courses)</h3>
+        <div class="chapters-list">
+            <div class="card chapter-card active-chapter" data-chapter="1">
+                <div class="chapter-info">
+                    <h4>Chapter 1</h4>
+                    <p>Introduction to Mobile Development</p>
+                </div>
+                <div class="chapter-action">
+                    <i data-lucide="play-circle"></i>
+                </div>
+            </div>
+            <div class="card chapter-card active-chapter" data-chapter="2">
+                <div class="chapter-info">
+                    <h4>Chapter 2</h4>
+                    <p>Android Platform Components</p>
+                </div>
+                <div class="chapter-action">
+                    <i data-lucide="play-circle"></i>
+                </div>
+            </div>
+            <div class="card chapter-card active-chapter" data-chapter="3">
+                <div class="chapter-info">
+                    <h4>Chapter 3</h4>
+                    <p>Android Application Components</p>
+                </div>
+                <div class="chapter-action">
+                    <i data-lucide="play-circle"></i>
+                </div>
+            </div>
+            <div class="card chapter-card active-chapter" data-chapter="4">
+                <div class="chapter-info">
+                    <h4>Chapter 4</h4>
+                    <p>Android Graphical Interfaces</p>
+                </div>
+                <div class="chapter-action">
+                    <i data-lucide="play-circle"></i>
+                </div>
+            </div>
+            <div class="card chapter-card active-chapter" data-chapter="5">
+                <div class="chapter-info">
+                    <h4>Chapter 5</h4>
+                    <p>Interactions Between Android Components</p>
+                </div>
+                <div class="chapter-action">
+                    <i data-lucide="play-circle"></i>
+                </div>
+            </div>
+        </div>
+
+        <h3 class="section-title">التطبيقات العملية (TPs)</h3>
+        <div class="chapters-list">
+            <div class="card chapter-card disabled" data-chapter="t1">
+                <div class="chapter-info">
+                    <h4>TP 1</h4>
+                    <p>Introduction (بدون محتوى)</p>
+                </div>
+                <div class="chapter-action">
+                    <i data-lucide="lock"></i>
+                </div>
+            </div>
+            <div class="card chapter-card active-chapter" data-chapter="t2">
+                <div class="chapter-info">
+                    <h4>TP 2</h4>
+                    <p>Interface Graphique</p>
+                </div>
+                <div class="chapter-action">
+                    <i data-lucide="play-circle"></i>
+                </div>
+            </div>
+            <div class="card chapter-card active-chapter" data-chapter="t3">
+                <div class="chapter-info">
+                    <h4>TP 3</h4>
+                    <p>Communication entre composants</p>
+                </div>
+                <div class="chapter-action">
+                    <i data-lucide="play-circle"></i>
+                </div>
+            </div>
+            <div class="card chapter-card active-chapter" data-chapter="t4">
+                <div class="chapter-info">
+                    <h4>TP 4</h4>
+                    <p>Liste, Dialogue, Menu</p>
+                </div>
+                <div class="chapter-action">
+                    <i data-lucide="play-circle"></i>
+                </div>
+            </div>
+            <div class="card chapter-card active-chapter" data-chapter="t5">
+                <div class="chapter-info">
+                    <h4>TP 5</h4>
+                    <p>Persistance des données (SharedPrefs)</p>
+                </div>
+                <div class="chapter-action">
+                    <i data-lucide="play-circle"></i>
+                </div>
+            </div>
+        </div>
+        </div>
+
+        <div id="ai-sections" class="hidden">
+            <h3 class="section-title">الكورسات (Courses)</h3>
+            <div class="chapters-list">
+                <div class="card chapter-card active-chapter" data-chapter="ai_c1">
+                    <div class="chapter-info">
+                        <h4>Logique des Prédicats &amp; Représentation</h4>
+                    </div>
+                    <div class="chapter-action">
+                        <i data-lucide="play-circle"></i>
+                    </div>
+                </div>
+                <div class="card chapter-card active-chapter" data-chapter="ai_c2">
+                    <div class="chapter-info">
+                        <h4>Réseaux Sémantiques &amp; Représentation des Connaissances</h4>
+                    </div>
+                    <div class="chapter-action">
+                        <i data-lucide="play-circle"></i>
+                    </div>
+                </div>
+            </div>
+            <h3 class="section-title">التطبيقات العملية (TPs)</h3>
+            <div class="chapters-list">
+                <div class="card chapter-card disabled">
+                    <div class="chapter-info">
+                        <h4>TP 1</h4>
+                        <p>قريباً...</p>
+                    </div>
+                    <div class="chapter-action">
+                        <i data-lucide="lock"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- واجهة الاختبار -->
+    <div id="quiz-view" class="view-container hidden">
+        <div class="app-container">
+            <header class="quiz-header">
+                <div class="progress-container">
+                    <div class="progress-bar" id="progress"></div>
+                </div>
+                <div class="header-content">
+                    <span class="question-counter" id="counter">1 / 8</span>
+                </div>
+            </header>
+
+            <main id="quiz-area">
+                <div class="card quiz-card">
+                    <div class="question-header">
+                        <i data-lucide="help-circle" class="question-icon"></i>
+                        <h2 id="question-text" class="question">جاري التحميل...</h2>
+                        <button id="hint-btn" class="hint-btn" title="تلميح">
+                            <i data-lucide="lightbulb"></i>
+                        </button>
+                    </div>
+                    
+                    <p class="subtitle">اختر جميع الإجابات الصحيحة (قد تكون هناك أكثر من إجابة واحدة)</p>
+                    
+                    <div class="options-container" id="options">
+                        <!-- Options injected via JS -->
+                    </div>
+
+                    <div class="actions">
+                        <button id="submit-btn" class="btn primary" disabled>
+                            <span>تأكيد الإجابة</span>
+                            <i data-lucide="check-circle"></i>
+                        </button>
+                    </div>
+                </div>
+            </main>
+
+            <!-- Hint Modal -->
+            <div id="hint-overlay" class="hint-overlay hidden">
+                <div class="hint-modal">
+                    <div class="hint-modal-header">
+                        <div class="hint-modal-icon"><i data-lucide="lightbulb"></i></div>
+                        <h3>تلميح</h3>
+                        <button id="hint-close" class="hint-close-btn"><i data-lucide="x"></i></button>
+                    </div>
+                    <p id="hint-text"></p>
+                </div>
+            </div>
+
+            <div id="result-area" class="card result-card hidden">
+                <div class="icon-circle large mx-auto"><i data-lucide="award"></i></div>
+                <h2 class="result-title">النتيجة النهائية</h2>
+                <div class="score-circle">
+                    <span id="score-text">0</span>
+                    <small>من 8</small>
+                </div>
+                <p id="feedback-text" class="feedback">أحسنت!</p>
+                <button id="restart-btn" class="btn primary">
+                    <span>العودة للفصول</span>
+                    <i data-lucide="rotate-ccw"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js?v=15"></script>
+    <script>
+        // Force clear old SW caches and reload if needed
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.getRegistrations().then(regs => {
+                regs.forEach(reg => reg.unregister());
+            });
+            caches.keys().then(names => {
+                names.forEach(name => {
+                    if (!name.includes('v15')) caches.delete(name);
+                });
+            });
+            navigator.serviceWorker.register('sw.js')
+                .then(() => console.log('SW Registered v15'))
+                .catch(err => console.log('SW Failed', err));
+        }
+    </script>
+</body>
+</html>
